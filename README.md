@@ -1,4 +1,4 @@
 se-share
 ========
 
-Policies shared with Apigee SEs
+Policies shared with everyone

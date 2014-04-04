@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="am_getsourceip">
+    <DisplayName>AM_GetSourceIP</DisplayName>
+    <FaultRules/>
+    <Properties/>
+      <AssignVariable>
+        <Name>requestorIP</Name>
+        <Value/>
+        <Ref>proxy.client.ip</Ref>
+    </AssignVariable>
+      <AssignVariable>
+        <Name>ipInfoKey</Name>
+        <Value></Value>
+        <Ref>kvmap_ipInfoKey</Ref>
+    </AssignVariable>
+      <AssignVariable>
+        <Name>bingKey</Name>
+        <Value></Value>
+        <Ref>kvmap_bingKey</Ref>
+    </AssignVariable>
+      <AssignVariable>
+        <Name>wundergroundKey</Name>
+        <Value></Value>
+        <Ref>kvmap_wundergroundKey</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

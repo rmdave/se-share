@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>So, what's this?  Address Mashup??</title>
+</head>
+<body>
+<div>
+    <p>
+        Yep, we want to show case the mashup capability of the Apigee Edge Platform
+    </p>
+
+    <table id='systems_list'>
+        <tr>
+            <td>
+                Bing
+            </td>
+            <td>
+                Take an lat/long and search within 5 kilometres of that address for a hospital (or some other entity).
+                You will need a Bing Map Key - http://www.microsoft.com/maps/create-a-bing-maps-key.aspx.
+                I created a Basic key for the demo.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                IPInfoDB account
+            </td>
+            <td>
+                We assume that a browser made the invocation.  We use this service to do a IP to Geo lookup and get the lat/long.
+                You will need an account for IP Info DB - http://www.ipinfodb.com/
+            </td>
+        </tr>
+        <tr>
+            <td>
+                OpenWeather (no account needed)
+            </td>
+            <td>
+                This demo uses APIs from the free OpenWeatherMap site - http://www.openweathermap.org/
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Apigee account
+            </td>
+            <td>
+                You will need API Services account; start here - http://apigee.com/about/
+            </td>
+        </tr>
+    </table>
+
+
+    <div id='demoOverview'>
+        <p>Here is what this demo will do:</p>
+        <ol>
+            <li>Allow user to submit a <a href='./processBingResponse/bingResponse.html'>form with a radius</a></li>
+            <li>Lookup their lat/long by calling an IP to Geo service</li>
+            <li>Start an async call to get weather from OpenWeatherMap</li>
+            <li>Call Bing Maps to get banks within the radius specified</li>
+            <li>Mashup the Weather and Points of Interest data and return to caller</li>
+            <li>Future considerations covered in another demo - mobile optimization for this user</li>
+        </ol>
+    </div>
+
+    <div>
+        <table id='apigeeFeatures'>
+            <thead>
+
+            <tr>
+                <td>API Services Feature</td>
+                <td>Description</td>
+            </tr>
+            </thead>
+
+<tbody>
+
+            <tr>
+                <td>Key/Value Map</td>
+                <td>Store configurations within the Apigee storage and not within policies.  This allows you to promote policies from development to test without changes to hard coded keys/configurations.</td>
+            </tr>
+            <tr>
+                <td>Service Callout Policy</td>
+                <td>A very quick way to perform a callout albeit a synchronous callout.</td>
+            </tr>
+            <tr>
+                <td>Async Callout</td>
+                <td>Fire off an async call to an external service and continue the API processing flow.</td>
+            </tr>
+            <tr>
+                <td>Enrichment of the response</td>
+                <td>Take the response from the 'backed' server (Bing Maps) and augment it with additional information (the weather data that was asynchronously requested).</td>
+            </tr>
+            <tr>
+                <td>Partner/Developer Management</td>
+                <td>Manage who can access the APIs via configuration and zero disruption to the IT development team.</td>
+            </tr>
+            <tr>
+                <td>Custom Analytics</td>
+                <td>Start capturing metrics on specific values within the request and easily display and analyze it without disrupting IT!</td>
+            </tr>
+</tbody>
+        </table>
+    </div>
+
+    <div>
+        For assistance, please use StackOverflow and add the tag "apigee".<br>
+        <br>
+        Copyright 2014 Apigee Corporation<br>
+        <br>
+        Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at <br>
+        <br>
+        http://www.apache.org/licenses/LICENSE-2.0<br>
+        <br>
+        Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.<br>
+    </div>
+</div>
+</body>
+</html>

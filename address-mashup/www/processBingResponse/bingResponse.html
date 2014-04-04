@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apigee Callout and Mashup Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div>
+<form id='bingForm'>
+
+    <input type='text' id='radius' value='2'>
+    <input type='submit' value="GO">
+
+</form>
+
+</div>
+
+<div id='weatherNearCity'>
+    <table id='weatherTable'>
+        <thead>
+        <tr>
+            <td>City</td>
+            <td>Current Temps</td>
+            <td>Cloudiness</td>
+        </tr>
+        </thead>
+        <tbody id='weatherTableBody'>
+
+        </tbody>
+    </table>
+</div>
+
+<div id='responseArea'>
+    <table id='respTable'>
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Latitude</td>
+            <td>Longitude</td>
+            <td>Distance for your location</td>
+        </tr>
+        </thead>
+        <tbody id='respTableBody'>
+
+        </tbody>
+    </table>
+</div>
+
+<script src='./parseBingResponse.js'></script>
+
+</body>
+</html>

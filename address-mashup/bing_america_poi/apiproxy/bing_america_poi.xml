@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="bing_america_poi">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt>1396558418946</CreatedAt>
+    <CreatedBy>rdave@apigee.com</CreatedBy>
+    <Description>Lookup POI in North America using Bing and lat/long</Description>
+    <DisplayName>bing_america_poi</DisplayName>
+    <LastModifiedAt>1396558418946</LastModifiedAt>
+    <LastModifiedBy>rdave@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>Add-CORS</Policy>
+        <Policy>Add-Quota</Policy>
+        <Policy>Remove-Query-Param</Policy>
+        <Policy>Verify-Api-Key</Policy>
+        <Policy>am_buildbingrequest</Policy>
+        <Policy>am_buildiplookuprequest</Policy>
+        <Policy>am_capturebinguri</Policy>
+        <Policy>am_getsourceip</Policy>
+        <Policy>am_setenrichedresponse</Policy>
+        <Policy>ev_getreqparams</Policy>
+        <Policy>js_extractlatlong</Policy>
+        <Policy>js_getweatherresult</Policy>
+        <Policy>js_startweatherrequest</Policy>
+        <Policy>kv_getkeys</Policy>
+        <Policy>raisefault-debug</Policy>
+        <Policy>sc_capturezipofrequestor</Policy>
+        <Policy>sc_getlatlongfromip</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://getWeatherResult.js</Resource>
+        <Resource>jsc://js_extractLatLong.js</Resource>
+        <Resource>jsc://startWeatherRequest.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

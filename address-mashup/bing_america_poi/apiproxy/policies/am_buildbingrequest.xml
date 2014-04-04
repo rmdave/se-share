@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="am_buildbingrequest">
+    <DisplayName>AM_BuildBingRequest</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+          <QueryParams>
+      <QueryParam name="spatialFilter">nearby({lat},{long},{reqParams.radius})</QueryParam>
+      <QueryParam name="$filter">EntityTypeID eq '6000'</QueryParam>
+      <QueryParam name="$format">json</QueryParam>
+      <QueryParam name="$select">EntityID,DisplayName,Latitude,Longitude,__Distance</QueryParam>
+      <QueryParam name="$top">50</QueryParam>
+      <QueryParam name="key">{bingKey}</QueryParam>
+    </QueryParams>
+      <Verb>GET</Verb>
+        <Headers/>
+        <Path/>
+    </Set>
+    <AssignVariable>
+        <Name>printkvmap_bingKey</Name>
+        <Value/>
+      <Ref>kvmap_bingKey</Ref>
+    </AssignVariable>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="true" transport="http" type="request"/>
+</AssignMessage>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="kv_getkeys" mapIdentifier="apiKeysForDemoByRajeev">
+    <DisplayName>KV_GetKeys</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <Get assignTo="kvmap_bingKey" index="1">
+        <Key>
+            <Parameter>bingmaps</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="kvmap_ipInfoKey" index="1">
+        <Key>
+            <Parameter>ipInfoDB</Parameter>
+        </Key>
+    </Get>
+      <Get assignTo="kvmap_wundergroundKey" index="1">
+        <Key>
+            <Parameter>wunderground</Parameter>
+        </Key>
+    </Get>
+    <Scope>organization</Scope>
+</KeyValueMapOperations>

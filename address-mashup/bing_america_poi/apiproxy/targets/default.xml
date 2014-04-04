@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <Flows/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <FaultRules/>
+                <Name>js_getweatherresult</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>am_setenrichedresponse</Name>
+            </Step>
+            <Step>
+                <Name>Add-CORS</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <HTTPTargetConnection>
+        <URL>http://spatial.virtualearth.net/REST/v1/data/f22876ec257b474b82fe2ffcb8393150/NavteqNA/NavteqPOIs</URL>
+    </HTTPTargetConnection>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+</TargetEndpoint>

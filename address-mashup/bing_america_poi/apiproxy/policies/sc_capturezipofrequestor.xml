@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<StatisticsCollector async="false" continueOnError="false" enabled="true" name="sc_capturezipofrequestor">
+    <DisplayName>SC_CaptureZipOfRequestor</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Statistics>
+        <Statistic name="requestingZip" ref="zip" type="STRING"></Statistic>
+    </Statistics>
+</StatisticsCollector>

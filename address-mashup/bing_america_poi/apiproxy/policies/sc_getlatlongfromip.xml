@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="sc_getlatlongfromip">
+    <DisplayName>SC_GetLatLongFromIP</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Request clearPayload="true" variable="ipLookUpRequest">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>ipLookUpResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>http://api.ipinfodb.com/v3/ip-city/</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

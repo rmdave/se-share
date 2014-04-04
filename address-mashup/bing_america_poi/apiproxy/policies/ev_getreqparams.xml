@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ev_getreqparams">
+    <DisplayName>EV_GetReqParams</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <QueryParam name="userID">
+      <Pattern ignoreCase="true">{userID}</Pattern>
+    </QueryParam>
+    <QueryParam name="start">
+      <Pattern ignoreCase="true">{start}</Pattern>
+    </QueryParam>
+    <QueryParam name="count">
+      <Pattern ignoreCase="true">{count}</Pattern>
+    </QueryParam>
+    <QueryParam name="radius">
+      <Pattern ignoreCase="true">{radius}</Pattern>
+    </QueryParam>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>reqParams</VariablePrefix>
+</ExtractVariables>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="am_buildiplookuprequest">
+    <DisplayName>AM_BuildIPLookupRequest</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+    <QueryParams>
+      <QueryParam name="key">{ipInfoKey}</QueryParam>
+      <QueryParam name="ip">{requestorIP}</QueryParam>
+    </QueryParams>
+      <Verb>GET</Verb>
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+  <AssignTo createNew="true" transport="http" type="request">ipLookUpRequest</AssignTo>
+</AssignMessage>
