@@ -31,15 +31,15 @@
             </Step>
             <Step>
                 <FaultRules/>
-                <Name>sc_capturezipofrequestor</Name>
-            </Step>
-            <Step>
-                <FaultRules/>
                 <Name>sc_getlatlongfromip</Name>
             </Step>
             <Step>
                 <FaultRules/>
                 <Name>js_extractlatlong</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>sc_capturezipofrequestor</Name>
             </Step>
             <Step>
                 <FaultRules/>

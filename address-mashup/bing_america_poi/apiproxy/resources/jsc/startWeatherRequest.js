@@ -10,7 +10,7 @@ http://api.openweathermap.org/data/2.1/find/city?lat=33.3062&lon=-111.841&radius
 var lat=context.getVariable('lat');
 var long=context.getVariable('long');
 
-var wundergroundURL='http://api.openweathermap.org/data/2.1/find/city?lat=' + 
+var openWeatherMapURL='http://api.openweathermap.org/data/2.1/find/city?lat=' + 
   lat +
   '&lon='+ 
     long +
@@ -18,7 +18,7 @@ var wundergroundURL='http://api.openweathermap.org/data/2.1/find/city?lat=' +
     
  
 
-var wunderGroundRequest = httpClient.get(wundergroundURL); 
-context.session['wunderGroundRequest'] = wunderGroundRequest;
-context.setVariable('wundergroundURL', wundergroundURL);
+var openWeatherMapRequest = httpClient.get(openWeatherMapURL); 
+context.session['openWeatherMapRequest'] = openWeatherMapRequest;
+context.setVariable('openWeatherMapURL', openWeatherMapURL);
 

@@ -1,4 +1,4 @@
-var name='wunderGroundRequest';
+var name='openWeatherMapRequest';
 var exchange = context.session[name];
 	 exchange.waitForComplete();
 	 if (exchange.isSuccess()) {
