@@ -2,6 +2,19 @@
 <ProxyEndpoint name="default">
     <Description/>
     <Flows/>
+  <FaultRules>
+    <FaultRule name="catchApiKey">
+      <Step>
+        <Name>rf_missingapikey</Name>
+      </Step>
+            <Condition>fault.name = "FailedToResolveAPIKey" </Condition>
+    </FaultRule>
+    <FaultRule name="catchAll">
+      <Step>
+        <Name>rf_proxyenderror</Name>
+      </Step>
+    </FaultRule>
+  </FaultRules>
     <PreFlow name="PreFlow">
         <Request>
             <Step>

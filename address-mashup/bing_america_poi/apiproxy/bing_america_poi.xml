@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <APIProxy revision="1" name="bing_america_poi">
     <ConfigurationVersion minorVersion="0" majorVersion="4"/>
-    <CreatedAt>1396558418946</CreatedAt>
-    <CreatedBy>rdave@apigee.com</CreatedBy>
+    <CreatedAt>1397121492204</CreatedAt>
+    <CreatedBy>rdave+trainorg@apigee.com</CreatedBy>
     <Description>Lookup POI in North America using Bing and lat/long</Description>
     <DisplayName>bing_america_poi</DisplayName>
-    <LastModifiedAt>1396558418946</LastModifiedAt>
-    <LastModifiedBy>rdave@apigee.com</LastModifiedBy>
+    <LastModifiedAt>1397121492204</LastModifiedAt>
+    <LastModifiedBy>rdave+trainorg@apigee.com</LastModifiedBy>
     <Policies>
         <Policy>Add-CORS</Policy>
         <Policy>Add-Quota</Policy>
@@ -23,6 +23,8 @@
         <Policy>js_startweatherrequest</Policy>
         <Policy>kv_getkeys</Policy>
         <Policy>raisefault-debug</Policy>
+        <Policy>rf_missingapikey</Policy>
+        <Policy>rf_proxyenderror</Policy>
         <Policy>sc_capturezipofrequestor</Policy>
         <Policy>sc_getlatlongfromip</Policy>
     </Policies>
