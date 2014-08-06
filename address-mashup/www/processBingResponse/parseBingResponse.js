@@ -82,15 +82,29 @@ function handleData(bingResponse){
 
 }
 
+
+//
+// Make a request to the correct APigee ORG and env upon submit
+//
 $( '#bingForm' ).submit(function( event ) {
 
     event.preventDefault();
 
+    $('#responseArea').html('<p class="error"></p>');
+    $('#weatherTable').remove();
 
 
-    var ajaxURL='http://demo23-test.apigee.net/v1/bing_america_poi?radius=' +
+    var apigeeOrg = $('#apigeeOrg').val();
+    var apigeeEnv = $('#apigeeEnv').val();
+    var apigeeApiKey = $('#apigeeApiKey').val();
+
+
+
+    var ajaxURL='http://'+ apigeeOrg + '-' + apigeeEnv  + '.apigee.net/v1/bing_america_poi?radius=' +
          $('#radius').val() +
-        '&apikey=aGmcDXnQcC2AcG3Ryvont3he3dPWXax6';
+        '&apikey=' + apigeeApiKey;
+
+    console.log('Making a request|' + ajaxURL + '|||');
 
     $.ajax({
         url:ajaxURL,
@@ -98,8 +112,8 @@ $( '#bingForm' ).submit(function( event ) {
             handleData(data);
         },
         error:function(){
-            // failed request; give feedback to user
-            $('#responseArea').html('<p class="error"><strong>Oops!</strong> Try that again in a few moments.</p>');
+            console.log ('failed request; give feedback to user');
+            $('#responseArea').html('<p class="error"><strong>Oops!</strong> Ajax call failed.</p>');
         }
     });
 
