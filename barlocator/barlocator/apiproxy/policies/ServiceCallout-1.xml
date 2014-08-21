@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout enabled="true" continueOnError="false" async="false" name="ServiceCallout-1">
+    <DisplayName>Servicecallout.Google</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Request clearPayload="false">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    </Request>
+    <Response>googleResponse</Response>
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>http://maps.googleapis.com/maps/api/geocode/json?{GeoCode.queryparams}</URL>
+    </HTTPTargetConnection>
+</ServiceCallout>

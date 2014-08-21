@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="barlocator">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt>1397152161967</CreatedAt>
+    <CreatedBy>Henri.Sorsa@sonymobile.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>barlocator</DisplayName>
+    <LastModifiedAt>1397152161967</LastModifiedAt>
+    <LastModifiedBy>Henri.Sorsa@sonymobile.com</LastModifiedBy>
+    <Policies>
+        <Policy>ApikeyValidation</Policy>
+        <Policy>ConstructGeoLocationQueryParams</Policy>
+        <Policy>DeveloperQuotas</Policy>
+        <Policy>EV-GetRequestParams</Policy>
+        <Policy>ExtractVariables-1</Policy>
+        <Policy>JSONResponseToXML</Policy>
+        <Policy>RewriteTarget</Policy>
+        <Policy>ServiceCallout-1</Policy>
+        <Policy>assignmessage-removeauthzheader</Policy>
+        <Policy>oauthv20-getbarinfo</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://constructQueryParam.js</Resource>
+        <Resource>jsc://rewriteTarget.js</Resource>
+    </Resources>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables enabled="true" continueOnError="false" async="false" name="EV-GetRequestParams">
+    <DisplayName>EV-GetRequestParams</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Header name="content-type">
+        <Pattern ignoreCase="false">{content-type}</Pattern>
+    </Header>
+    <Variable name="name"/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
+</ExtractVariables>

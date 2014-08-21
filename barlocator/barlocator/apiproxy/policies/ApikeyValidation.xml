@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<GetOAuthV1Info enabled="true" continueOnError="false" async="false" name="ApikeyValidation">
+    <Description>Authenticates the API Key based request</Description>
+    <DisplayName>ApikeyValidation</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <AppKey ref="request.queryparam.apikey"></AppKey>
+</GetOAuthV1Info>

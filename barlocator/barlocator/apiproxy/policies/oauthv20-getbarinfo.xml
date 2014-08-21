@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="oauthv20-getbarinfo">
+    <DisplayName>OAuthv20-GetBarInfo</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Attributes/>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>VerifyAccessToken</Operation>
+    <Scope>BAR</Scope>
+    <GenerateResponse enabled="true"/>
+</OAuthV2>

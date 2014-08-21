@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description>Default Proxy to create flows on an API</Description>
+    <FaultRules/>
+    <Flows>
+        <Flow name="/">
+            <Description/>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Condition>not (request.queryparam.apikey is null)</Condition>
+                <FaultRules/>
+                <Name>ApikeyValidation</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>DeveloperQuotas</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>EV-GetRequestParams</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ConstructGeoLocationQueryParams</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ServiceCallout-1</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ExtractVariables-1</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>oauthv20-getbarinfo</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>assignmessage-removeauthzheader</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/barlocator</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>
