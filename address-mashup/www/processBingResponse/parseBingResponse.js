@@ -71,9 +71,9 @@ function handleData(bingResponse){
     var weatherInfo=bingResponse.weather;
     txt+='<tr>';
 
-    txt+='<td>' + weatherInfo.list[0].name  +'</td>';
-    txt+='<td>' + weatherInfo.list[0].main.temp +'</td>';
-    txt+='<td>' + weatherInfo.list[0].weather[0].description  +'</td>';
+    txt+='<td>' + weatherInfo.name  +'</td>';
+    txt+='<td>' + weatherInfo.main.temp +'</td>';
+    txt+='<td>' + weatherInfo.weather[0].description  +'</td>';
 
     txt+='</tr>';
     $('#weatherTable tr:last').after(txt);

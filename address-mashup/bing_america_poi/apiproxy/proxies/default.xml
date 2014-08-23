@@ -2,19 +2,19 @@
 <ProxyEndpoint name="default">
     <Description/>
     <Flows/>
-  <FaultRules>
-    <FaultRule name="catchApiKey">
-      <Step>
-        <Name>rf_missingapikey</Name>
-      </Step>
-            <Condition>fault.name = "FailedToResolveAPIKey" </Condition>
-    </FaultRule>
-    <FaultRule name="catchAll">
-      <Step>
-        <Name>rf_proxyenderror</Name>
-      </Step>
-    </FaultRule>
-  </FaultRules>
+    <FaultRules>
+        <FaultRule name="catchApiKey">
+            <Step>
+                <Name>rf_missingapikey</Name>
+            </Step>
+            <Condition>fault.name = "FailedToResolveAPIKey"</Condition>
+        </FaultRule>
+        <FaultRule name="catchAll">
+            <Step>
+                <Name>rf_proxyenderror</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
     <PreFlow name="PreFlow">
         <Request>
             <Step>
@@ -56,15 +56,15 @@
             </Step>
             <Step>
                 <FaultRules/>
+                <Name>js_startweatherrequest</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
                 <Name>am_buildbingrequest</Name>
             </Step>
             <Step>
                 <FaultRules/>
                 <Name>am_capturebinguri</Name>
-            </Step>
-            <Step>
-                <FaultRules/>
-                <Name>js_startweatherrequest</Name>
             </Step>
         </Request>
         <Response/>

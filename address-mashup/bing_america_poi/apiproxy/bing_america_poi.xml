@@ -5,7 +5,7 @@
     <CreatedBy>rdave+trainorg@apigee.com</CreatedBy>
     <Description>Lookup POI in North America using Bing and lat/long</Description>
     <DisplayName>bing_america_poi</DisplayName>
-    <LastModifiedAt>1397121492204</LastModifiedAt>
+    <LastModifiedAt>1408831133017</LastModifiedAt>
     <LastModifiedBy>rdave+trainorg@apigee.com</LastModifiedBy>
     <Policies>
         <Policy>Add-CORS</Policy>
