@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <FaultRules/>
+                <Name>Spike-Arrest-1</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>EV_GetJsonVar</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>RF_DumpJsonData</Name>
+                <Condition>(jsonData != "jackson")</Condition>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>RF_JacksonFound</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows/>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/conditional_flow</BasePath>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

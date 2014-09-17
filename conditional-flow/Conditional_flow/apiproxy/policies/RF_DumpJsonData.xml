@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<RaiseFault async="false" continueOnError="false" enabled="true" name="RF_DumpJsonData">
+    <DisplayName>RF_DumpJsonData</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <FaultResponse>
+        <Set>
+            <Headers/>
+            <Payload contentType="text/plain">
+          hi, you sent in |jsonData=|{jsonData}|
+          
+          </Payload>
+            <StatusCode>401</StatusCode>
+            <ReasonPhrase>Server - I didn't like it</ReasonPhrase>
+        </Set>
+    </FaultResponse>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+</RaiseFault>

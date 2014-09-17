@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="Conditional_flow">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1410990224006</CreatedAt>
+    <CreatedBy>rdave+trainorg@apigee.com</CreatedBy>
+    <Description>Show how a conditional flow works</Description>
+    <DisplayName>Conditional_flow</DisplayName>
+    <LastModifiedAt>1410991799495</LastModifiedAt>
+    <LastModifiedBy>rdave+trainorg@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>AM_DumpJsonData</Policy>
+        <Policy>EV_GetJsonVar</Policy>
+        <Policy>RF_DumpJsonData</Policy>
+        <Policy>RF_JacksonFound</Policy>
+        <Policy>Spike-Arrest-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>
