@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV_Delete_Key" mapIdentifier="DynamicCreationKVMapper">
+    <DisplayName>KV_Delete_Key</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Delete>
+        <Key>
+            <Parameter ref="key2_ev_policy"></Parameter>
+        </Key>
+    </Delete>
+    <Scope>organization</Scope>
+</KeyValueMapOperations>

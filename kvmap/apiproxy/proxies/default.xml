@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <FaultRules/>
+                <Name>Spike-1</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>ExtractKey</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <Flows>
+        <Flow name="get value">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>KV-Get-Key</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/{key}&quot;) and (request.verb = &quot;GET&quot;)</Condition>
+        </Flow>
+        <Flow name="update value">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>KV-Update-Key</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/{key}/{myvalvar1}&quot;) and (request.verb = &quot;PUT&quot;)</Condition>
+        </Flow>
+        <Flow name="create value">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>KV_CreateNewEntry</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/key/myvalvar1&quot;) and (request.verb = &quot;POST&quot;)</Condition>
+        </Flow>
+        <Flow name="delete value">
+            <Description/>
+            <Request>
+                <Step>
+                    <FaultRules/>
+                    <Name>KV_Delete_Key</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/{key}&quot;) and (request.verb = &quot;DELETE&quot;)</Condition>
+        </Flow>
+    </Flows>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <FaultRules/>
+                <Name>KV_GetManualKey</Name>
+            </Step>
+            <Step>
+                <FaultRules/>
+                <Name>AM_SetResponse</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <HTTPProxyConnection>
+        <BasePath>/kv_map</BasePath>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="noroute"/>
+</ProxyEndpoint>

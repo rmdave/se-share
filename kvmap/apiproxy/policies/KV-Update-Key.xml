@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV-Update-Key" mapIdentifier="DynamicCreationKVMapper">
+    <DisplayName>KV Update Key</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Put override="true">
+        <Key>
+            <Parameter ref="key2_ev_policy"></Parameter>
+        </Key>
+        <Value ref="myvalvar1"/>
+    </Put>
+    <Scope>organization</Scope>
+</KeyValueMapOperations>

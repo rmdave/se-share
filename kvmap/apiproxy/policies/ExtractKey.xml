@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractKey">
+    <DisplayName>ExtractKey</DisplayName>
+    <FaultRules/>
+    <Properties/>
+   <URIPath>
+     <Pattern ignoreCase="true">/{key2_ev_policy}</Pattern>
+   </URIPath>    
+     <URIPath>
+       <Pattern ignoreCase="true">/{key2_ev_policy}/{myvalvar1}</Pattern>
+   </URIPath>    
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
+</ExtractVariables>

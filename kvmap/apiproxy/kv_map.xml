@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="kv_map">
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1430152648292</CreatedAt>
+    <CreatedBy>rdave@apigee.com</CreatedBy>
+    <Description>How do we use KVMap policies</Description>
+    <DisplayName>kv_map</DisplayName>
+    <LastModifiedAt>1430153253837</LastModifiedAt>
+    <LastModifiedBy>rdave@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>AM_SetResponse</Policy>
+        <Policy>ExtractKey</Policy>
+        <Policy>KV-Get-Key</Policy>
+        <Policy>KV-Update-Key</Policy>
+        <Policy>KV_CreateNewEntry</Policy>
+        <Policy>KV_Delete_Key</Policy>
+        <Policy>KV_GetManualKey</Policy>
+        <Policy>Spike-1</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints/>
+    <validate>false</validate>
+</APIProxy>

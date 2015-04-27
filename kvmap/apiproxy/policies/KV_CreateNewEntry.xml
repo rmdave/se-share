@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV_CreateNewEntry" mapIdentifier="DynamicCreationKVMapper">
+    <DisplayName>KV_CreateNewEntry</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <InitialEntries>
+        <Entry>
+            <Key>
+                <Parameter>JamesBrown</Parameter>
+            </Key>
+            <Value>InitialEntries_section</Value>
+        </Entry>
+    </InitialEntries>
+    <Scope>organization</Scope>
+</KeyValueMapOperations>

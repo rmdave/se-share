@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV_GetManualKey" mapIdentifier="DynamicCreationKVMapper">
+    <DisplayName>KV_GetManualKey</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Get assignTo="MANUAL_KEY_VAR" index="1">
+        <Key>
+            <Parameter>JamesBrown</Parameter>
+        </Key>
+    </Get>
+    <Get assignTo="VALUE_OF_DYNAMIC_KEY_JUST_UPDATED" index="1">
+        <Key>
+            <Parameter ref="key2_ev_policy"></Parameter>
+        </Key>
+    </Get>
+    <Scope>organization</Scope>
+</KeyValueMapOperations>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM_SetResponse">
+    <DisplayName>AM_SetResponse</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Set>
+        <Headers/>
+      <Payload>
+        {key2_ev_policy} = {VALUE_OF_DYNAMIC_KEY_JUST_UPDATED}
+      </Payload>
+  </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

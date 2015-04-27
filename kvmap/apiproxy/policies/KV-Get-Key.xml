@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV-Get-Key" mapIdentifier="DynamicCreationKVMapper">
+    <DisplayName>KV Get Key</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Get assignTo="VALUE_key2_ev_policy_first_entry" index="1">
+        <Key>
+            <Parameter ref="key2_ev_policy"></Parameter>
+        </Key>
+    </Get>
+    <Scope>organization</Scope>
+</KeyValueMapOperations>

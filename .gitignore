@@ -4,6 +4,5 @@ scratchArea
 .pushapi
 .DS_Store
 *.iml
-
-
-
+exclude
+.iml
