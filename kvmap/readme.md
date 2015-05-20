@@ -37,6 +37,19 @@ Response
 
 key2 = UPDATED
       
+
+Update using composite key
+--------------------------
+
+PUT http://demo23-test.apigee.net/kv_map/composite
+
+HTTP Headers:
+
+        key1:key1_1
+        key2:key2_1
+        composite_value:comp_val1
+
+
 Delete a key
 ------------
 
