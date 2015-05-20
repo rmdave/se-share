@@ -7,7 +7,7 @@
     <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
     <Put override="true">
         <Key>
-            <Parameter ref="key2_ev_policy"></Parameter>
+            <Parameter ref="{key2_ev_policy}"></Parameter>
         </Key>
         <Value ref="myvalvar1"/>
     </Put>

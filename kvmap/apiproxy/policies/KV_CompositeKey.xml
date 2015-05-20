@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KV_CompositeKey"  mapIdentifier="DynamicCreationKVMapper">
+    <DisplayName>KV_CompositeKey</DisplayName>
+    <Properties/>
+    <ExclusiveCache>false</ExclusiveCache>
+    <ExpiryTimeInSecs>-1</ExpiryTimeInSecs>
+    <Put override="true">
+        <Key>
+            <Parameter ref="key2_ev_policy"></Parameter>
+        </Key>
+        <Value ref="request.header.composite_value"/>
+    </Put>
+    <Scope>organization</Scope>
+</KeyValueMapOperations>

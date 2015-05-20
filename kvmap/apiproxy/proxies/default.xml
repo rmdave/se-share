@@ -59,6 +59,19 @@
             <Response/>
             <Condition>(proxy.pathsuffix MatchesPath &quot;/{key}&quot;) and (request.verb = &quot;DELETE&quot;)</Condition>
         </Flow>
+        <Flow name="composite key">
+            <Description/>
+            <Request>
+                <Step>
+                    <Name>JS_BuildCompositeKeys</Name>
+                </Step>
+                <Step>
+                    <Name>KV_CompositeKey</Name>
+                </Step>
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath &quot;/composite&quot;) and (request.verb = &quot;PUT&quot;)</Condition>
+        </Flow>
     </Flows>
     <PostFlow name="PostFlow">
         <Request/>
